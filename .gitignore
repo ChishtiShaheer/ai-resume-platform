@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Env
+.env
+backend/.env
+frontend/.env
+
+# Node
+node_modules/
+frontend/dist/
+frontend/build/
+
+# DB / storage
+*.db
+backend/storage/resumes/*
+!backend/storage/resumes/.gitkeep
+backend/chroma_db/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/*.log
