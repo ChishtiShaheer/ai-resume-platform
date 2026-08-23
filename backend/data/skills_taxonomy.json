@@ -1,0 +1,15 @@
+{
+  "programming_languages": ["python", "java", "javascript", "typescript", "c++", "c#", "go", "rust", "ruby", "php", "kotlin", "swift", "r", "scala", "matlab", "sql", "dart", "perl", "objective-c"],
+  "web_frontend": ["react", "angular", "vue", "next.js", "nuxt.js", "svelte", "html", "css", "sass", "tailwind css", "bootstrap", "redux", "jquery", "webpack", "vite"],
+  "web_backend": ["node.js", "express.js", "django", "flask", "fastapi", "spring boot", "asp.net", "ruby on rails", "laravel", "nestjs", "graphql", "rest api", "grpc"],
+  "mobile": ["android", "ios", "react native", "flutter", "swiftui", "kotlin multiplatform", "xamarin"],
+  "databases": ["postgresql", "mysql", "mongodb", "redis", "sqlite", "oracle", "sql server", "cassandra", "dynamodb", "firebase", "supabase", "elasticsearch", "neo4j"],
+  "cloud_devops": ["aws", "azure", "gcp", "docker", "kubernetes", "terraform", "ansible", "jenkins", "ci/cd", "github actions", "gitlab ci", "linux", "nginx", "cloudformation", "helm"],
+  "data_ai": ["machine learning", "deep learning", "nlp", "computer vision", "pytorch", "tensorflow", "scikit-learn", "pandas", "numpy", "data analysis", "data engineering", "spark", "hadoop", "langchain", "llm", "generative ai", "prompt engineering", "opencv", "keras", "sentence transformers", "vector databases", "rag"],
+  "design": ["figma", "adobe xd", "sketch", "ui/ux design", "photoshop", "illustrator", "wireframing", "prototyping"],
+  "project_management": ["agile", "scrum", "kanban", "jira", "product management", "stakeholder management", "risk management", "pmp"],
+  "soft_skills": ["communication", "leadership", "teamwork", "problem solving", "critical thinking", "time management", "adaptability", "collaboration", "mentoring", "public speaking"],
+  "business": ["sales", "marketing", "seo", "digital marketing", "business analysis", "financial modeling", "accounting", "excel", "powerpoint", "salesforce", "sap", "crm"],
+  "testing_qa": ["unit testing", "selenium", "cypress", "jest", "pytest", "test automation", "manual testing", "load testing", "qa"],
+  "security": ["cybersecurity", "penetration testing", "network security", "owasp", "oauth", "iam", "encryption"]
+}
