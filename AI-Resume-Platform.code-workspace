@@ -1,0 +1,53 @@
+{
+  "folders": [
+    { "name": "🗂 Project Root", "path": "." },
+    { "name": "⚙️ Backend (FastAPI)", "path": "backend" },
+    { "name": "🎨 Frontend (React)", "path": "frontend" }
+  ],
+  "settings": {
+    "task-buttons.tasks": [
+      { "label": "▶ Backend", "task": "▶ Run Backend", "tooltip": "Start the FastAPI backend on :8000" },
+      { "label": "▶ Frontend", "task": "▶ Run Frontend", "tooltip": "Start the React frontend on :5173" },
+      { "label": "▶ Both", "task": "▶ Run Both (Backend + Frontend)", "tooltip": "Start backend + frontend together" }
+    ],
+    "task-buttons.showCounter": false,
+    "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/bin/python"
+  },
+  "extensions": {
+    "recommendations": [
+      "spencerwmiles.vscode-task-buttons",
+      "ms-python.python",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode"
+    ]
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "▶ Run Backend",
+        "type": "shell",
+        "command": "${workspaceFolder:🗂 Project Root}/scripts/run_backend.sh",
+        "isBackground": true,
+        "problemMatcher": [],
+        "presentation": { "reveal": "always", "panel": "dedicated", "group": "backend" }
+      },
+      {
+        "label": "▶ Run Frontend",
+        "type": "shell",
+        "command": "${workspaceFolder:🗂 Project Root}/scripts/run_frontend.sh",
+        "isBackground": true,
+        "problemMatcher": [],
+        "presentation": { "reveal": "always", "panel": "dedicated", "group": "frontend" }
+      },
+      {
+        "label": "▶ Run Both (Backend + Frontend)",
+        "type": "shell",
+        "command": "${workspaceFolder:🗂 Project Root}/scripts/run_both.sh",
+        "isBackground": true,
+        "problemMatcher": [],
+        "presentation": { "reveal": "always", "panel": "dedicated", "group": "both" }
+      }
+    ]
+  }
+}

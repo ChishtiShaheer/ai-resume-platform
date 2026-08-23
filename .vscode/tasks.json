@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "▶ Run Backend",
+      "type": "shell",
+      "command": "${workspaceFolder}/scripts/run_backend.sh",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "group": "backend" }
+    },
+    {
+      "label": "▶ Run Frontend",
+      "type": "shell",
+      "command": "${workspaceFolder}/scripts/run_frontend.sh",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "group": "frontend" }
+    },
+    {
+      "label": "▶ Run Both (Backend + Frontend)",
+      "type": "shell",
+      "command": "${workspaceFolder}/scripts/run_both.sh",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "group": "both" }
+    }
+  ]
+}

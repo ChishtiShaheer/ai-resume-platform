@@ -1,0 +1,8 @@
+{
+  "task-buttons.tasks": [
+    { "label": "▶ Backend", "task": "▶ Run Backend", "tooltip": "Start the FastAPI backend on :8000" },
+    { "label": "▶ Frontend", "task": "▶ Run Frontend", "tooltip": "Start the React frontend on :5173" },
+    { "label": "▶ Both", "task": "▶ Run Both (Backend + Frontend)", "tooltip": "Start backend + frontend together" }
+  ],
+  "task-buttons.showCounter": false
+}
