@@ -9,5 +9,10 @@ if [ ! -f .env ]; then
   echo "No backend/.env found — copying from .env.example (edit it to add your API keys)."
   cp .env.example .env
 fi
+if [ -d .venv ]; then
+  source .venv/bin/activate
+elif [ -d ../.venv ]; then
+  source ../.venv/bin/activate
+fi
 echo "Starting backend on http://localhost:8000 ..."
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
