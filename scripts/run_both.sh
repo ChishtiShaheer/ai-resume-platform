@@ -2,13 +2,15 @@
 # Runs backend + frontend together in one terminal, tearing both down
 # together on Ctrl+C.
 set -e
-cd "$(dirname "$0")"
-trap 'kill 0' EXIT
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
 
-./run_backend.sh &
+trap 'kill 0' EXIT INT TERM
+
+"$SCRIPT_DIR/run_backend.sh" &
 BACKEND_PID=$!
 
-./run_frontend.sh &
+"$SCRIPT_DIR/run_frontend.sh" &
 FRONTEND_PID=$!
 
 echo ""

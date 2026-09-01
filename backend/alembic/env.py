@@ -17,7 +17,7 @@ from app.db.base import Base
 from app.models import user, job, candidate  # noqa: F401 - registers models on Base
 
 config = context.config
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+config.set_main_option("sqlalchemy.url", settings.DATABASE_URL.replace("%", "%%"))
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)

@@ -18,7 +18,17 @@ export default function LoginPage() {
       await login(email, password);
       navigate("/");
     } catch (err: any) {
-      setError(err.response?.data?.detail || "Could not sign in. Check your credentials.");
+      const data = err.response?.data;
+      if (typeof data?.detail === "string") {
+        setError(data.detail);
+      } else if (Array.isArray(data?.detail)) {
+        const msg = data.detail.map((d: any) => d.msg || `${d.loc?.join(".")}: ${d.msg}`).join(", ");
+        setError(msg || "Validation error. Please check your inputs.");
+      } else if (err.message) {
+        setError(`Connection error: ${err.message}. Is the backend running on port 8000?`);
+      } else {
+        setError("Could not sign in. Check your credentials.");
+      }
     } finally {
       setLoading(false);
     }
